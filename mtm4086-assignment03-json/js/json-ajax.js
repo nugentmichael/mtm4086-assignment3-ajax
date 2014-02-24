@@ -26,40 +26,60 @@ function loadJSON(){
         var jsonObj = JSON.parse(http_request.responseText);
 
         // My Entire JSON Object from data.json
-        console.log(jsonObj);
+        // console.log(jsonObj);
 
-        // Acessing a Specific Key of the object
-        console.log('testing title key: ' + jsonObj[0].title);
+        // var img = document.createElement("img");
+        // img.src = jsonObj[0].imageUrl;
+        // document.appendChild(img);
+
+        // Div to append all my results to
+        var feedWrapper = document.getElementById('article-feed');
+
+        // Create an Img with src attribute as the imageURL
+        var articleImage = document.createElement('img');
+        // articleImage.setAttribute('src',jsonObj[0].imageUrl);
+
+        // Article Heading
+         var articleHeading = document.createElement('h1');
+        // articleHeading.innerHTML = jsonObj[0].title;
+
+        // Append the Image to the article-feed div.
+        feedWrapper.appendChild(articleImage);
+        feedWrapper.appendChild(articleHeading);
 
         for (var key in jsonObj) {
 
-            // Only return keys if there's anything there.
-           if (jsonObj.hasOwnProperty(key)) {
-              console.log('loop all title: ' + jsonObj[key].title);
-              console.log('loop all caption: ' + jsonObj[key].caption);
+          var newDiv = document.createElement('div');
+          // console.log(jsonObj[key]);
 
-              // the element to append everything to.
-              var feedWrapper = document.getElementById('article-feed');
+          // Create an Img with src attribute as the imageURL
+          var articleImage = document.createElement('img');
+          articleImage.setAttribute('src',jsonObj[key].imageUrl);
 
-              // Article Heading and Link - Title is text, url is href
-              var articleHeading = document.createElement('h1');
-              var articleLink = document.createElement('a');
-              articleLink.setAttribute('href', jsonObj[key].url);
-              articleLink.innerHTML = jsonObj[key].title;
-              articleHeading.appendChild(articleLink);
+          // Article Heading
+          var articleHeading = document.createElement('h1');
+          articleHeading.innerHTML = jsonObj[key].title;
 
-              // Article Image
-              var articleImage = document.createElement('img');
-              articleImage.setAttribute('src',jsonObj[key].imageUrl)
+          // Article Heading
+          var articleCaption = document.createElement('p');
+          articleCaption.innerHTML = jsonObj[key].caption;
 
-              // Appending html elements and values to my div article-feed
-              feedWrapper.appendChild(articleImage);
-              feedWrapper.appendChild(articleHeading);
-              
-           }
+          // Article Image
+          // var articleImage = document.createElement('img');
+          // var articleURL = document.createElement('a');
+          // articleURL.innerHTML = jsonObj[key].imageUrl;
+          // articleImage.setAttribute('src',jsonObj[key].imageUrl);
+          
+          var imageLink = document.createElement('a');
+          imageLink.setAttribute('href',jsonObj[key].url);
+          imageLink.appendChild(articleImage);
 
-        } // End json loop
-
+          // Append the Image to the article-feed div.
+          newDiv.appendChild(articleHeading);
+          newDiv.appendChild(imageLink);
+          newDiv.appendChild(articleCaption);
+          feedWrapper.appendChild(newDiv);
+        }
       }
 
    }

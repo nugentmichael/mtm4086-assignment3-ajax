@@ -1,16 +1,33 @@
 [
 	{
-	    "title" : "This is the first title", 
-	    "caption"   : "and the first caption underneath it",
-	    "url" : "coolthing.html",
-	    "imageUrl" : "img/file5181338228603.jpg",
-	    "credits": "Why me, of course."
+	    "title" : "Hogsback Park", 
+	    "caption"   : "View the wonderful leaf colours change during the autumn season.",
+	    "url" : "http://www.google.com",
+	    "imageUrl" : "img/8253425446_7be3bb40a8_b.jpg",
+	    "credits": "Why me, of course.",
+	    "extrafield" : "This is an extra field."
 	},
 	{
-	    "title" : "This is the second title", 
-	    "caption"   : "and the second caption underneath it",
-	    "url" : "http://google.com",
-	   	"imageUrl" : "img/1388344538s2wq5.jpg",
+	    "title" : "Byward Market", 
+	    "caption"   : "Check out one of the most touristy places in Ottawa, the Byward Market!",
+	    "url" : "http://www.google.com",
+	    "imageUrl" : "img/8253688972_24098b62d0_b.jpg",
+	    "credits": "Why me, of course.",
+	    "extrafield" : "This is an extra field."
+	},
+	{
+	    "title" : "Gatineau Bridge", 
+	    "caption"   : "The famous bridge that leads you over to the Province of Québec.",
+	    "url" : "http://www.google.com",
+	    "imageUrl" : "img/8253731262_b6ce222379_b.jpg",
+	    "credits": "Why me, of course.",
+	    "extrafield" : "This is an extra field."
+	},
+	{
+	    "title" : "Byward Market", 
+	    "caption"   : "Another view of the Byward Market.",
+	    "url" : "http://www.google.com",
+	   	"imageUrl" : "img/8253773732_5c71efbdff_b.jpg",
 	    "credits": "You might of guessed it, I did it as well."
 	}
 ]

@@ -45,6 +45,10 @@ body {
  font-style: italic;
  text-align: center;
 }
+.product-list li img {
+	width: 10em;
+	height: 10em;
+}
 .loading {
  min-height: 5em;
  background: url('http://preloaders.net/preloaders/287/Filling%20broken%20ring.gif') center center no-repeat;

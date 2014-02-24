@@ -1,0 +1,47 @@
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+body {
+	font-family: 'Quattrocento Sans', sans-serif;
+	color: #333;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+button {
+	background-color: #333;
+	padding: 1em 2em;
+	display: block;
+	margin: auto;
+	font-family: 'Quattrocento Sans', sans-serif;
+	color: #EEE;
+	font-size: 1em;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+#loading {
+	display: block;
+	margin: 1em auto;
+	width: 13em;
+}
+
+#loading a:link {
+	color: #EEE;
+	text-decoration: none;
+}
+
+#loading a:visited {
+	color: #EEE;
+	text-decoration: none;
+}
+
+#loading a:hover {
+	text-decoration: underline;
+}
+
+#loading a:active {
+	text-decoration: none;
+}
